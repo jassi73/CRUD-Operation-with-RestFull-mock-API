@@ -2,12 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { ChakraProvider } from '@chakra-ui/react'
 import reportWebVitals from './reportWebVitals';
-
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Read from './Components/Read'
+import Update from './Components/Update'
+import Delete from './Components/Delete'
+import Header from './Components/Header';
 ReactDOM.render(
+  <ChakraProvider>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+   <BrowserRouter>
+   <Header/>
+    <Routes>
+      <Route path="/" element={<App />}/>
+      <Route path="/read" element={<Read />}/>
+      <Route path="/update" element={<Update />}/>
+      <Route path="/delete" element={<Delete />}>
+      </Route>
+    </Routes>
+  </BrowserRouter>
+  </React.StrictMode>
+  </ChakraProvider>,
   document.getElementById('root')
 );
 
