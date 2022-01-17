@@ -15,6 +15,9 @@ import {
 import axios from 'axios'
 import DatePicker from 'react-date-picker';
 import 'react-date-picker/dist/DatePicker.css'
+import validator from 'validator'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Update() {
 
@@ -23,6 +26,15 @@ function Update() {
     <Box width="50" align="center" justifyContent="center" mt="3">
       <Header mt='6' />
       <SignupArea />
+      <ToastContainer position="top-right"
+        autoClose={2000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover />
     </Box>
   )
 }
@@ -49,6 +61,11 @@ const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [gender, setGender] = useState('male')
   const [id, setId] = useState('')
+  useEffect(() => {
+    if (email.length && !validator.isEmail(email)) {
+      toast.error("Enter valid email!")
+    }
+  }, [email])
     
     const onTrigger = () =>{
       axios.get(`http://localhost:3000/users/${id}`)
@@ -60,9 +77,7 @@ const SignupForm = () => {
   setGender(response.data.radio)
   });
   }
- useEffect(() => {
-  onTrigger()
- }, [])
+
  
  const onSubmit = () => {
   const payload = {
