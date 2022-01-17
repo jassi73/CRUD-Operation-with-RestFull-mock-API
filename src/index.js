@@ -13,6 +13,7 @@ import Read from './Components/Read'
 import Update from './Components/Update'
 import Delete from './Components/Delete'
 import Header from './Components/Header';
+import ListData from './Components/ListData'
 ReactDOM.render(
   <ChakraProvider>
   <React.StrictMode>
@@ -22,7 +23,8 @@ ReactDOM.render(
       <Route path="/" element={<App />}/>
       <Route path="/read" element={<Read />}/>
       <Route path="/update" element={<Update />}/>
-      <Route path="/delete" element={<Delete />}>
+      <Route path="/delete" element={<Delete />}/>
+      <Route path="/list" element={<ListData />}>
       </Route>
     </Routes>
   </BrowserRouter>

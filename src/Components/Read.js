@@ -88,7 +88,7 @@ const SignupForm = () => {
           <FormControl display="flex">
             <FormLabel width="200px" mt={2}>First Name</FormLabel>
             <Input
-              readOnly={true}
+              readOnly
               type="name"
               placeholder="Enter your Full Name"
               value={firstName}
@@ -98,7 +98,7 @@ const SignupForm = () => {
             <FormControl display="flex">
               <FormLabel width="200px" mt={2}>Last Name</FormLabel>
               <Input
-                readOnly={true}
+                readOnly
                 type="last name"
                 placeholder="Entter Your Last Name"
                 value={lastName}
@@ -110,7 +110,7 @@ const SignupForm = () => {
             <FormControl display="flex">
               <FormLabel width="200px" mt={2}>Email address</FormLabel>
               <Input
-                readOnly="true"
+                readOnly
                 type="email"
                 placeholder="Enter your email address"
                 value={email }
@@ -125,7 +125,7 @@ const SignupForm = () => {
                </FormLabel>
               <DatePicker
                width="200px" 
-               readOnly={true} 
+               readOnly
                clearable
                value={typeof dob === "string" ? new Date(dob) : dob}
                name="date"
@@ -139,7 +139,7 @@ const SignupForm = () => {
           <RadioGroup
            display="flex" 
            justifyContent='space-between' 
-           readOnly={true}
+           readOnly
             value={gender}
              mt={5}>
             <FormLabel width="200px" mt={2}>Gender</FormLabel>

@@ -1,3 +1,44 @@
 {
-  "users": []
+  "users": [
+    {
+      "firstName": "Jasraj",
+      "lastName": "Parihar",
+      "email": "jessparihar73@gmail.com",
+      "dob": "2022-01-16T12:06:40.866Z",
+      "radio": "male",
+      "id": 1
+    },
+    {
+      "firstName": "Jasa",
+      "lastName": "Ram",
+      "email": "jessparihar73@gmail.com",
+      "dob": "2022-01-16T12:06:50.018Z",
+      "radio": "male",
+      "id": 2
+    },
+    {
+      "firstName": "Chris",
+      "lastName": "Partida",
+      "email": "jezznara737@gmail.com",
+      "dob": "2022-01-16T12:07:05.093Z",
+      "radio": "male",
+      "id": 3
+    },
+    {
+      "firstName": "Jasa",
+      "lastName": "Ram",
+      "email": "jessparihar73gmail.com",
+      "dob": "2022-01-16T12:30:31.797Z",
+      "radio": "male",
+      "id": 5
+    },
+    {
+      "firstName": "Jassi",
+      "lastName": "Parihar",
+      "email": "jezznara737@gmail.com",
+      "dob": "2022-01-17T10:17:56.251Z",
+      "radio": "male",
+      "id": 6
+    }
+  ]
 }

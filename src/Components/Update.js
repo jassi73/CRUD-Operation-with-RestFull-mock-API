@@ -53,7 +53,6 @@ const SignupForm = () => {
     const onTrigger = () =>{
       axios.get(`http://localhost:3000/users/${id}`)
   .then(response => {
-  console.log(response);
   setFirstName(response.data.firstName)
   setLastName(response.data.lastName)
   setDob(response.data.dob)

@@ -51,6 +51,15 @@ const Header = () => {
           Delete
         </Button>
         </Link>  
+        <Link to="list">  
+        <Button
+          width="100px"
+          mr={4}
+          colorScheme="blue"
+        >
+          List Data
+        </Button>
+        </Link>  
         </Box>
       </Flex>
      
